@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="calculadora.html">
+
+        <input type="text" id="num1"/>
+        <input type="text" id="num2"/>
+        <input type="button" onclick="ExibirSoma()" value="+"/>
+        <input type="button" onclick="ExibirSub()" value="-"/>
+        <input type="button" onclick="ExibirMul()" value="X"/>
+        <input type="button" onclick="ExibirDiv()" value="/"/>
+
+    </form>
+
+    <p id="exibibi"></p>
+
+    <form action="calculadora.html">
+
+        <input type="button" onclick="pokemons.forEach(Exibir)" value="Exibir"/>
+
+    </form>
+
+
+    <!-- <p id="listinha"></p> -->
+
+
+
+<!-- ------------------------------------------------------------------------------ FUNCTIONS ------------------------------------------------------------------------------------>
+
+    <script>
+
+        function ExibirSoma (){
+
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value); 
+            var x = a+b;               
+            document.getElementById("exibibi").innerHTML = "O resultado da sua soma é: " + x;
+
+
+        }
+        
+        function ExibirSub (){
+
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value); 
+            var x = a-b;               
+            document.getElementById("exibibi").innerHTML = "O resultado da sua subtração é: " + x;
+        }
+
+        function ExibirMul (){
+
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value); 
+            var x = a*b;               
+            document.getElementById("exibibi").innerHTML = "O resultado da sua multiplicação é: " + x;
+
+
+        }
+
+        function ExibirDiv (){
+
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value); 
+            var x = a/b;               
+            document.getElementById("exibibi").innerHTML = "O resultado da sua divisão é: " + x + "\nE o resto da divisão é: " + a%b;
+
+
+        }
+
+        // function ExibirSoma(){
+
+        //     var a = parseInt(document.getElementById("num1").value);
+        //     var b = parseInt(document.getElementById("num2").value); 
+        //     var x = Somar(a,b);               
+        //     document.getElementById("exibibi").innerHTML = x;
+
+        // }
+
+//////////////////////////////////////////////////////////////////////////////// LISTINHA ////////////////////////////////////////////////////////////////////////////////////////////
+
+        const pokemons = ["Snorlax", "Mudkip", "Dito", "Duskul"];
+
+        function Exibir(item, index){
+    
+            document.write("<p>" +index + ": " + item+ " </p>")
+
+        
+        }
+
+        
+    </script>
+
+</body>
+</html>
